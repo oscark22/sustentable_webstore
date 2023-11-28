@@ -8,14 +8,15 @@ RUN npm install
 
 COPY . .
 
+ENV PORT=80
+
 RUN npm run build
 
 RUN npm ci --omit dev
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD ["node", "build"]
-
+CMD ["node", "-r", "dotenv/config", "build"]
 
 
 
