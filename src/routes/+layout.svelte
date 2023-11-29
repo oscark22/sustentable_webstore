@@ -35,7 +35,7 @@
 				</a>
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/skeletonlabs/skeleton"
+					href="https://github.com/M1keyy"
 					target="_blank"
 					rel="noreferrer"
 				>
