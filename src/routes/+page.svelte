@@ -20,7 +20,7 @@
 			price: 29.99
 		},
 	];
-	let hola = []
+
 	onMount(async() => {
 		const response = await fetch('https://w3mhrh3aadtac2yr45bw55iuce0hkfpv.lambda-url.us-east-1.on.aws/')
 		products = await response.json()
