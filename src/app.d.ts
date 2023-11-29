@@ -9,12 +9,12 @@ declare namespace App {
 }
 
 declare class Product {
-	id: string
+	id: number
 	name: string
-	price: number
+	price: double
 }
 
 declare class CartItem {
-	id: string
+	id: number
 	quantity: number 
 }

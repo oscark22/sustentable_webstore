@@ -1,29 +1,36 @@
 <script lang="ts">
 	import ProductCard from "$lib/productCard.svelte";
+	import { onMount } from "svelte";
 
-	const products : Product[] = [
+	let products : Product[] = [];
+	products = [
 		{
-			id: "1",
+			id: 1,
 			name: "coffee",
-			price: 5
+			price: 5.99
 		},
 		{
-			id: "2",
+			id: 2,
 			name: "sunglasses",
-			price: 10
+			price: 9.99
 		},
 		{
-			id: "3",
+			id: 3,
 			name: "water",
-			price: 50
+			price: 29.99
 		},
 	];
+	let hola = []
+	onMount(async() => {
+		const response = await fetch('https://w3mhrh3aadtac2yr45bw55iuce0hkfpv.lambda-url.us-east-1.on.aws/')
+		products = await response.json()
+		console.log(products)
+	})
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="grid grid-cols-3 gap-4">
 		<div class="col-snap-3">
-			<h1>Hola</h1>
 		</div>
 
 		{#each products as product}	
