@@ -1,23 +1,38 @@
 <script lang="ts">
+    import { get } from "svelte/store";
+    import { cartItems, addToCart, removeFromCart } from "../cart";
+
     export let product : Product = {
-        id: "", name: "", price: 0
+        id: 0, name: "", price: 0
     };
+    let cart = get(cartItems);
+
+    let cartItemIndex = cart.findIndex((item) => { return item.id == product.id });
+    let cartProduct = cart[cartItemIndex];
+    cartItems.subscribe((newCartValue) => {
+        cart = newCartValue;
+        cartItemIndex = cart.findIndex((item) => { return item.id == product.id });
+        cartProduct = cart[cartItemIndex];
+        console.log(cart);
+    });
 
     console.log(product);
 </script>
 
 <div class="card">
     <header class="card-header">
-        <h2>Nombre del producto</h2>
+        <h2>{ product.name }</h2>
     </header>
+    {#if cartProduct !== undefined}
+        <div class="card-body px-4">
+            Cantidad: <strong>{ cartProduct.quantity }</strong>
+        </div>
+    {/if}
     <div class="card-body px-4">
-        Cantidad: <strong>4</strong>
-    </div>
-    <div class="card-body px-4">
-        Price : $10
-    </div>
+        Price : ${ product.price }
+    </div><br>
     <footer class="card-footer">
-        <button class="p-2 rounded variant-glass-primary">Añadir</button>
-        <button class="p-2 rounded variant-glass-error">Añadir</button>
+        <button class="p-2 rounded variant-glass-primary" on:click={() => addToCart(product.id)}>Añadir</button>
+        <button class="p-2 rounded variant-glass-error" on:click={() => removeFromCart(product.id)}>Eliminar</button>
     </footer>
 </div>
