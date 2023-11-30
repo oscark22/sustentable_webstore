@@ -32,13 +32,13 @@
 </script>
 
 <br>
-<div class="snap-x scroll-px-4 snap-mandatory scroll-smooth flex gap-4 overflow-x-auto px-2 py-2 ">
+<div class="snap-x scroll-px-4 snap-mandatory scroll-smooth flex gap-4 overflow-x-auto px-2 py-2">
 	{#each categorias as categoria}
 		<a class="snap-start shrink-0 card py-4 w-40 md:w-80 text-center variant-filled-secondary hover:variant-filled-primary" style="font-size: 18px;" href="/"><h1><strong>{categoria}</strong></h1></a>
 	{/each}
 </div>
 <div class="container h-full mx-auto flex justify-center items-center">
-	<div class="grid grid-cols-3 gap-4">
+	<div class="md:grid grid-cols-3 gap-4">
 		
 		{#each products as product}
 			<ProductCard product={product}/>
