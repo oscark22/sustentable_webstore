@@ -29,7 +29,7 @@
 			<svelte:fragment slot="trail">
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://youtu.be/dQw4w9WgXcQ?si=MeRRvXvrRKOuZoF2"
+					href="https://youtu.be/uT9SRMc69vM?si=wgqF_eNYGV3JUGCb"
 					target="_blank"
 					rel="noreferrer"
 				>
