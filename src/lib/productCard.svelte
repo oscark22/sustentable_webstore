@@ -26,9 +26,9 @@
 </script>
 
 <a class="block card card-hover p-4" href="/">
-    <header class="card-header">
+    <header class="card-header mb-4">
         <h2 style="font-size: 24px"><strong>{ product.name }</strong></h2>
-    </header><br>
+    </header>
     <div class="card-body p-4 max-h-[150px] overflow-auto space-y-4"> { des } </div>
     {#if cartProduct !== undefined}
         <div class="card-body px-4">
@@ -40,9 +40,8 @@
         <img src="{images[product.id-1]}">
     </div>
     <div class="card-body p-4">
-        Price : ${ product.price }
-    </div><br>
-    
+        Precio: ${ product.price }
+    </div>
     <footer class="card-footer">
         <button class="p-2 rounded variant-glass-primary hover:variant-filled-primary" on:click={() => addToCart(product.id)}>Añadir</button>
         <button class="p-2 rounded variant-ghost-error hover:variant-filled-error" on:click={() => removeFromCart(product.id)}>Eliminar</button>
