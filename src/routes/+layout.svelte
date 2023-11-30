@@ -13,34 +13,22 @@
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
 		<AppBar>
+		
 			<svelte:fragment slot="lead">
-				<strong class="text-xl uppercase">Skeleton</strong>
+				<h1 class="h1">
+					<span class="bg-gradient-to-br from-green-500 to-cyan-200 bg-clip-text text-transparent box-decoration-clone px-12">e-Commerce Sustentable</span>
+				</h1>			
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
 					class="btn btn-sm variant-ghost-surface"
-					href="https://discord.gg/EXqV7W8MtY"
+					href="https://youtu.be/dQw4w9WgXcQ?si=MeRRvXvrRKOuZoF2"
 					target="_blank"
 					rel="noreferrer"
 				>
-					Discord
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://twitter.com/SkeletonUI"
-					target="_blank"
-					rel="noreferrer"
-				>
-					Twitter
-				</a>
-				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://github.com/M1keyy"
-					target="_blank"
-					rel="noreferrer"
-				>
-					GitHub
-				</a>
+					Carrito
+				</a><span class="badge-icon variant-filled"> (icon) </span>
+
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>

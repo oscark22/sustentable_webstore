@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ProductCard from "$lib/productCard.svelte";
+	import { AppRail, AppRailAnchor, AppRailTile } from "@skeletonlabs/skeleton";
 	import { onMount } from "svelte";
 
 	let products : Product[] = [];
@@ -20,27 +21,28 @@
 			price: 29.99
 		},
 	];
-	let hola = []
+	let currentTile: number = 0;
+	let categorias = ["Reutilizables", "Biodegradables", "Reusables", "Higiene", "categoria", "Categoria", "Categoria", "Categoria", "Categoria"];
 	onMount(async() => {
 		const response = await fetch('https://w3mhrh3aadtac2yr45bw55iuce0hkfpv.lambda-url.us-east-1.on.aws/')
 		products = await response.json()
 		console.log(products)
-	})
+	});
+	
 </script>
 
+<br>
+<div class="snap-x scroll-px-4 snap-mandatory scroll-smooth flex gap-4 overflow-x-auto px-2 py-2 ">
+	{#each categorias as categoria}
+		<a class="snap-start shrink-0 card py-4 w-40 md:w-80 text-center variant-filled-secondary hover:variant-filled-primary" href="/"><h1><strong>{categoria}</strong></h1></a>
+	{/each}
+</div>
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="grid grid-cols-3 gap-4">
-		<div class="col-snap-3">
-		</div>
-
-		{#each products as product}	
+		
+		{#each products as product}
 			<ProductCard product={product}/>
 		{/each}
 
-		<div class="col-snap-3">
-			<button class="btn variant-filled-primary">
-				Ckeckout with Stripe API
-			</button>
-		</div>
 	</div>
 </div>
