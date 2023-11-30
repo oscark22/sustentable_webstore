@@ -16,8 +16,15 @@
 		
 			<svelte:fragment slot="lead">
 				<h1 class="h1">
-					<span class="bg-gradient-to-br from-green-500 to-cyan-200 bg-clip-text text-transparent box-decoration-clone px-12">e-Commerce Sustentable</span>
+					<span class="font-sans font-bold bg-gradient-to-br from-green-500 to-cyan-200 bg-clip-text text-transparent box-decoration-clone px-12">e-Commerce Sustentable</span>
 				</h1>			
+								
+				<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
+					<div class="input-group-shim">Search</div>
+					<input type="search" placeholder="Search..." />
+					<button class="variant-filled-secondary">Submit</button>
+				</div>
+						
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a

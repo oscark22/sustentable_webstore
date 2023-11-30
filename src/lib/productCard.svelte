@@ -27,7 +27,7 @@
 
 <a class="block card card-hover p-4" href="/">
     <header class="card-header">
-        <h2><strong>{ product.name }</strong></h2>
+        <h2 style="font-size: 24px"><strong>{ product.name }</strong></h2>
     </header><br>
     <div class="card-body p-4 max-h-[150px] overflow-auto space-y-4"> { des } </div>
     {#if cartProduct !== undefined}
