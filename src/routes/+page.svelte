@@ -8,17 +8,20 @@
 		{
 			id: 1,
 			name: "coffee",
-			price: 5.99
+			price: 5.99,
+			des: "nothing"
 		},
 		{
 			id: 2,
 			name: "sunglasses",
-			price: 9.99
+			price: 9.99,
+			des: "nothing"
 		},
 		{
 			id: 3,
 			name: "water",
-			price: 29.99
+			price: 29.99,
+			des: "nothing"
 		},
 	];
 	let currentTile: number = 0;

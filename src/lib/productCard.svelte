@@ -3,7 +3,7 @@
     import { cartItems, addToCart, removeFromCart } from "../cart";
 
     export let product : Product = {
-        id: 0, name: "", price: 0
+        id: 0, name: "", price: 0, des: ""
     };
     let cart = get(cartItems);
 
@@ -23,7 +23,6 @@
      "https://th.bing.com/th/id/OIP.xgLdaFnb4skPcbRhtsYYgQHaE7?rs=1&pid=ImgDetMain",
     "https://th.bing.com/th?id=OIP.0n6SYtzfpHjb4HBEuzU7wAHaDe&w=298&h=204&c=12&rs=1&qlt=99&pcl=faf9f7&o=6&pid=13.1",
     "https://4.bp.blogspot.com/-atz5WgBqCys/VxasgrWNCEI/AAAAAAAB9Ao/ClzFWC9eEEcOWygTP4l3m0rEXVpRTX1ggCKgB/s1600/Perritos-cachorros-162.jpg"];
-    let des = "A pesar del número de ejemplares limitado y de las reducidas zonas donde habita, es uno de los animales más reconocibles de todos los rincones del mundo. Durante larga tiempo estuvo en grave riesgo de extinción y se convirtió el símbolo del Fondo Mundial para la Naturaleza. Actualmente la cantidad ejemplares en libertad está en aumento. El apetito de este mamífero es insaciable y puede llegar a pasar más de la mitad del día comiendo aquello que más le gusta sin descanso: bambú. Además también se alimenta de algunos frutos y pequeños animales. A pesar de su aspecto torpe y lento es un animal muy ágil trepando a los árboles así como desplazándose por el agua a nado. Suelen tener un comportamiento solitario, excepto cuando buscan aparearse. Las hembras pasan un periodo de gestación de 5 meses hasta que nace la cría, totalmente ciega y blanca.  Suelen vivir entre quince y veinte años, pesan unos 130 kilos y pueden llegar a medir 1.5 metros. Su hábitat natural son las zonas montañosas de China.";
     
 </script>
 
@@ -31,7 +30,7 @@
     <header class="card-header mb-4">
         <h2 style="font-size: 24px"><strong>{ product.name }</strong></h2>
     </header>
-    <div class="card-body p-4 max-h-[150px] overflow-auto space-y-4"> { des } </div>
+    <div class="card-body p-4 max-h-[150px] overflow-auto space-y-4"> { product.des } </div>
     {#if cartProduct !== undefined}
         <div class="card-body px-4">
             Cantidad: <strong>{ cartProduct.quantity }</strong>

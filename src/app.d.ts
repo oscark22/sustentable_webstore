@@ -12,6 +12,7 @@ declare class Product {
 	id: number
 	name: string
 	price: double
+	des: string
 }
 
 declare class CartItem {
